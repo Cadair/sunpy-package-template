@@ -8,3 +8,5 @@ Previewing Rendered Templates
 
 To make it easier to preview changes to files when rendering the template there is a tox environment named ``bake_cookies``.
 If you run ``tox -e bake_cookies`` a new directory named ``cookies`` will be present with a variety of test renders of the template in (see ``tests/conftest.py`` for the configuration options).
+
+This commit does nothing
