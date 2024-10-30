@@ -37,6 +37,9 @@ ALL_REPOS = (
     "sunpy/sunkit-pyvista",
     "sunpy/sunpy-soar",
     "sunpy/sunkit-instruments",
+    "sunpy/sunkit-spex",
+    "sunpy/sunraster",
+    "sunpy/drms",
 )
 
 
@@ -78,7 +81,7 @@ def run_multi_updater(
 
     The GITHUB_TOKEN should be a Personal Access Token (classic) with the workflow permission and public_repo permissions.
     """
-    helper = CruftUpdater(token=os.environ["GITHUB_TOKEN"], dry_run=dry_run, verbose=verbose)
+    helper = CruftUpdater(token=github_token, dry_run=dry_run, verbose=verbose)
     for repo in repos:
         helper.run(repo)
 
